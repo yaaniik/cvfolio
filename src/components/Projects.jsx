@@ -32,70 +32,72 @@ function Projects() {
   return (
     <section id="progetti" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <motion.div
+        <motion.h2 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.2 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl font-bold mb-12 text-center"
         >
-          <h2 className="text-4xl font-bold mb-12 text-center">Progetti</h2>
+          Progetti
+        </motion.h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ 
-                  delay: index * 0.2, 
-                  duration: 1.2
-                }}
-                className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all"
-              >
-                <div className="mb-3">
-                  <span className="text-xs bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full">
-                    {project.category}
+        <div className="grid md:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ 
+                delay: index * 0.2, 
+                duration: 1.8,
+                ease: "easeInOut"
+              }}
+              className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500"
+            >
+              <div className="mb-3">
+                <span className="text-xs bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full">
+                  {project.category}
+                </span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">{project.title}</h3>
+              <p className="text-gray-400 mb-4">{project.description}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.tech.map(tech => (
+                  <span key={tech} className="text-sm bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full">
+                    {tech}
                   </span>
-                </div>
-                <h3 className="text-xl font-bold mb-3">{project.title}</h3>
-                <p className="text-gray-400 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map(tech => (
-                    <span key={tech} className="text-sm bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                ))}
+              </div>
 
-                {(project.github || project.demo) && (
-                  <div className="flex gap-4 pt-4 border-t border-gray-700">
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors"
-                      >
-                        <Github size={20} />
-                        <span className="text-sm">GitHub</span>
-                      </a>
-                    )}
-                    {project.demo && (
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors"
-                      >
-                        <ExternalLink size={20} />
-                        <span className="text-sm">Demo</span>
-                      </a>
-                    )}
-                  </div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+              {(project.github || project.demo) && (
+                <div className="flex gap-4 pt-4 border-t border-gray-700">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors"
+                    >
+                      <Github size={20} />
+                      <span className="text-sm">GitHub</span>
+                    </a>
+                  )}
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors"
+                    >
+                      <ExternalLink size={20} />
+                      <span className="text-sm">Demo</span>
+                    </a>
+                  )}
+                </div>
+              )}
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -50,13 +50,12 @@ function Skills() {
               key={category.title}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: false, margin: "-100px" }}
               transition={{ 
                 delay: categoryIndex * 0.15, 
                 duration: 1.8,
                 ease: "easeInOut"
               }}
-              className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all"
+              className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500"
             >
               <h3 className="text-xl font-semibold mb-4 text-blue-400">{category.title}</h3>
               <div className="flex flex-wrap gap-2">

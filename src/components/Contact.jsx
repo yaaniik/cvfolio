@@ -27,14 +27,13 @@ function Contact() {
             href="mailto:yanik.dimitrov@outlook.com"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: false, margin: "-100px" }}
             transition={{ 
               delay: 0.3, 
               duration: 1.8,
               ease: "easeInOut"
             }}
             whileHover={{ scale: 1.05 }}
-            className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all flex items-center gap-4"
+            className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 flex items-center gap-4"
           >
             <div className="bg-blue-500/20 p-3 rounded-lg">
               <Mail className="text-blue-400" size={24} />
@@ -49,14 +48,13 @@ function Contact() {
             href="tel:+393755588385"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: false, margin: "-100px" }}
             transition={{ 
               delay: 0.4, 
               duration: 1.8,
               ease: "easeInOut"
             }}
             whileHover={{ scale: 1.05 }}
-            className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all flex items-center gap-4"
+            className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 flex items-center gap-4"
           >
             <div className="bg-blue-500/20 p-3 rounded-lg">
               <Phone className="text-blue-400" size={24} />
@@ -73,14 +71,13 @@ function Contact() {
             rel="noopener noreferrer"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: false, margin: "-100px" }}
             transition={{ 
               delay: 0.5, 
               duration: 1.8,
               ease: "easeInOut"
             }}
             whileHover={{ scale: 1.05 }}
-            className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all flex items-center gap-4"
+            className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 flex items-center gap-4"
           >
             <div className="bg-blue-500/20 p-3 rounded-lg">
               <Linkedin className="text-blue-400" size={24} />
@@ -94,7 +91,6 @@ function Contact() {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: false, margin: "-100px" }}
             transition={{ 
               delay: 0.6, 
               duration: 1.8,
@@ -115,7 +111,6 @@ function Contact() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: false, margin: "-100px" }}
           transition={{ delay: 0.7, duration: 1.8, ease: "easeInOut" }}
           className="flex flex-wrap gap-4 justify-center"
         >

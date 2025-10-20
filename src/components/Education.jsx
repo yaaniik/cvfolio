@@ -90,13 +90,12 @@ function Education() {
                 key={edu.title}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: false, margin: "-100px" }}
                 transition={{ 
                   delay: index * 0.15, 
                   duration: 1.8,
                   ease: "easeInOut"
                 }}
-                className={`bg-gray-800 p-6 rounded-lg border border-gray-700 ${colors.border} transition-all`}
+                className={`bg-gray-800 p-6 rounded-lg border border-gray-700 ${colors.border}`}
               >
                 <div className="flex items-start gap-4">
                   <div className={`${colors.bg} p-3 rounded-lg flex-shrink-0`}>
