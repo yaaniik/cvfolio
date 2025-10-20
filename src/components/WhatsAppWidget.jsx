@@ -19,7 +19,6 @@ function WhatsAppWidget() {
     };
   }, [opened]);
 
-  // Mostra freccia quando si scorre in basso
   useEffect(() => {
     if (opened) return;
     let lastScrollY = window.scrollY;
@@ -46,12 +45,33 @@ function WhatsAppWidget() {
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    const startPosition = window.scrollY;
+    const distance = startPosition;
+    const duration = 1000;
+    let start = null;
+
+    const easeInOutQuad = (t) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+
+    const animation = (currentTime) => {
+      if (start === null) start = currentTime;
+      const elapsed = currentTime - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeProgress = easeInOutQuad(progress);
+      const newPosition = startPosition - distance * easeProgress;
+
+      window.scrollTo(0, newPosition);
+
+      if (progress < 1) {
+        requestAnimationFrame(animation);
+      }
+    };
+
+    requestAnimationFrame(animation);
   };
 
   return (
     <>
-      {/* Effetto glow dietro il bottone - PIÙ LEGGERO */}
+      {/* Effetto glow dietro il bottone */}
       <AnimatePresence>
         {!opened && (
           <motion.div
@@ -63,7 +83,7 @@ function WhatsAppWidget() {
         )}
       </AnimatePresence>
 
-      {/* Bottone WhatsApp / Freccia - PIÙ TRASPARENTE */}
+      {/* Bottone WhatsApp / Freccia */}
       <AnimatePresence>
         {!opened && (
           <motion.button
@@ -118,7 +138,7 @@ function WhatsAppWidget() {
               exit={{ opacity: 0, y: 50, scale: 0.9 }}
               className="fixed bottom-16 right-3 md:bottom-20 md:right-5 w-[calc(100vw-1.5rem)] max-w-sm md:w-96 bg-gray-800/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-700 z-[9999] overflow-hidden"
             >
-              {/* Header con TUA FOTO */}
+              {/* Header */}
               <div className="bg-[#25D366] p-4 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white/30">
