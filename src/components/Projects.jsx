@@ -19,7 +19,7 @@ function Projects() {
   },
   {
     company: 'INGEGNERIA & SOFTWARE INDUSTRIALE',
-    role: 'Full STack Developer',
+    role: 'Full Stack Developer',
     period: 'Ottobre 2023 - Novembre 2024',
     description: 'Contributo allo sviluppo e manutenzione di un sistema integrato per la gestione del personale, comprensivo di timbrature, ferie, paghe e altre funzionalità aziendali. Responsabile dell’implementazione di nuove funzionalità, della risoluzione di bug e dell’ottimizzazione delle API, con particolare attenzione alla migrazione di servizi legacy verso tecnologie più moderne per migliorare performance e scalabilità.',
     tech: ['PHP', 'CodeIgniter', 'C#', 'ASP.NET Core', 'SQL Server', 'JavaScript', 'HTML', 'CSS']
