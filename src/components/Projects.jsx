@@ -7,7 +7,7 @@ function Projects() {
       company: 'FREELANCE',
       role: 'Freelance Web Developer',
       period: 'Dicembre 2022 - Presente',
-      description: 'Sviluppo di soluzioni web personalizzate per piccole e medie imprese, dalla progettazione alla realizzazione di siti web e applicazioni digitali.',
+      description: 'Sviluppo soluzioni web personalizzate per piccole e medie imprese, dalla progettazione alla realizzazione di siti web e applicazioni digitali.',
       tech: ['React', 'JavaScript', 'HTML', 'CSS', 'Mantine UI', 'Bootstrap', 'Tailwind CSS', 'Figma']
     },
     {
@@ -21,7 +21,7 @@ function Projects() {
       company: 'INGEGNERIA & SOFTWARE INDUSTRIALE',
       role: 'Full Stack Developer',
       period: 'Ottobre 2023 - Novembre 2024',
-      description: 'Contributo allo sviluppo e manutenzione di un sistema integrato per la gestione del personale, comprensivo di timbrature, ferie, paghe e altre funzionalità aziendali. Responsabile dell’implementazione di nuove funzionalità, della risoluzione di bug e dell’ottimizzazione delle API, con particolare attenzione alla migrazione di servizi legacy verso tecnologie più moderne per migliorare performance e scalabilità.',
+      description: 'Ho contributo allo sviluppo e manutenzione di un sistema integrato per la gestione del personale, comprensivo di timbrature, ferie, paghe e altre funzionalità aziendali. Responsabile dell’implementazione di nuove funzionalità, della risoluzione di bug e dell’ottimizzazione delle API, con particolare attenzione alla migrazione di servizi legacy verso tecnologie più moderne per migliorare performance e scalabilità.',
       tech: ['PHP', 'CodeIgniter', 'C#', 'ASP.NET Core', 'SQL Server', 'JavaScript', 'HTML', 'CSS']
     },
     {
@@ -36,7 +36,7 @@ function Projects() {
   const projects = [
     {
     title: 'Sistema di Gestione Ristorante - Full Stack',
-    description: 'Piattaforma web completa per ristorante con sistema di prenotazioni online, sondaggi di soddisfazione clienti e area amministrativa multi-ruolo. Include dashboard analytics per statistiche giornaliere, settimanali, mensili e annuali dei feedback, gestione utenti con ruoli personalizzati e editor fotografico integrato per aggiornamento contenuti del sito.',
+    description: 'Ho realizzato una piattaforma web completa per ristorante con sistema di prenotazioni online, sondaggi di soddisfazione clienti e area amministrativa multi-ruolo. Include una dashboard analytics per statistiche giornaliere, settimanali, mensili e annuali dei feedback, gestione utenti con ruoli personalizzati e un editor fotografico integrato per l\'aggiornamento dei contenuti del sito.',
     tech: ['React', 'Vite', 'Mantine UI', 'PHP', 'JSON', 'CRUD', 'Authentication', 'Role-Based Access'],
     category: 'Full Stack Web App',
     github: '', // Aggiungi link quando carichi su GitHub
@@ -44,7 +44,7 @@ function Projects() {
   },
   {
     title: 'Modello AI - Previsione Furti Chicago',
-    description: 'Sviluppo modello AI (Random Forest) su Google Colab per prevedere furti a Chicago, utilizzando Pandas, Seaborn, Matplotlib e Folium per l\'analisi e visualizzazione dei dati.',
+    description: 'Ho sviluppato un modello di intelligenza artificiale su Google Colab per prevedere i furti a Chicago, utilizzando librerie Python per l\'analisi e la visualizzazione dei dati, sotto forma di grafici e mappe di calore.',
     tech: ['Python', 'Random Forest', 'Pandas', 'Seaborn', 'Matplotlib', 'Folium'],
     category: 'AI & Data Analysis',
     github: '', // Aggiungi il tuo link GitHub se disponibile
@@ -52,7 +52,7 @@ function Projects() {
   },
   {
     title: 'Portfolio Personale',
-    description: 'Sito portfolio personale sviluppato con React, Vite e Tailwind CSS. Design moderno e responsive con animazioni fluide tramite Framer Motion.',
+    description: 'Ho realizzato il mio sito portfolio personale, caratterizzato da un design moderno, responsivo e da animazioni fluide.',
     tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
     category: 'Web Development',
     github: '', // Aggiungi il tuo link GitHub
