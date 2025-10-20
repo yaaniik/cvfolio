@@ -153,7 +153,7 @@ function WhatsAppWidget() {
               <div className="p-4 space-y-4">
                 <div className="bg-gray-700/50 p-3 rounded-lg">
                   <p className="text-gray-300 text-sm">
-                    👋 Ciao! Come posso aiutarti?
+                    👋 Ciao! Sono disponibile per qualsiasi domanda o informazione sul mio lavoro. Sarà un piacere rispondere!
                   </p>
                 </div>
 
