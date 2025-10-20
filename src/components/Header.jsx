@@ -17,7 +17,7 @@ function Header({ activeSection, onNavigate }) {
     <motion.header 
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 1.2 }}
+      transition={{ duration: 0.8 }}
       className="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800"
     >
       <nav className="max-w-6xl mx-auto px-6 py-4">
@@ -68,7 +68,7 @@ function Header({ activeSection, onNavigate }) {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 1.2 }}
+              transition={{ duration: 0.3 }}
               className="md:hidden overflow-hidden"
             >
               <ul className="flex flex-col gap-4 pt-4 pb-2">
