@@ -68,7 +68,7 @@ function Header({ activeSection, onNavigate }) {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
               className="md:hidden overflow-hidden"
             >
               <ul className="flex flex-col gap-4 pt-4 pb-2">
