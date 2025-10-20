@@ -48,12 +48,13 @@ function Skills() {
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: false, margin: "-100px" }}
               transition={{ 
-                delay: categoryIndex * 0.1, 
-                duration: 0.6,
-                ease: "easeOut"
+                delay: categoryIndex * 0.15, 
+                duration: 1.8,
+                ease: "easeInOut"
               }}
               className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all"
             >

@@ -25,12 +25,13 @@ function Contact() {
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           <motion.a
             href="mailto:yanik.dimitrov@outlook.com"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false, margin: "-100px" }}
             transition={{ 
               delay: 0.3, 
-              duration: 0.6,
-              ease: "easeOut"
+              duration: 1.8,
+              ease: "easeInOut"
             }}
             whileHover={{ scale: 1.05 }}
             className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all flex items-center gap-4"
@@ -46,12 +47,13 @@ function Contact() {
 
           <motion.a
             href="tel:+393755588385"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false, margin: "-100px" }}
             transition={{ 
               delay: 0.4, 
-              duration: 0.6,
-              ease: "easeOut"
+              duration: 1.8,
+              ease: "easeInOut"
             }}
             whileHover={{ scale: 1.05 }}
             className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all flex items-center gap-4"
@@ -69,12 +71,13 @@ function Contact() {
             href="https://linkedin.com/in/yanik-dimitrov/"
             target="_blank"
             rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false, margin: "-100px" }}
             transition={{ 
               delay: 0.5, 
-              duration: 0.6,
-              ease: "easeOut"
+              duration: 1.8,
+              ease: "easeInOut"
             }}
             whileHover={{ scale: 1.05 }}
             className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all flex items-center gap-4"
@@ -89,12 +92,13 @@ function Contact() {
           </motion.a>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false, margin: "-100px" }}
             transition={{ 
               delay: 0.6, 
-              duration: 0.6,
-              ease: "easeOut"
+              duration: 1.8,
+              ease: "easeInOut"
             }}
             className="bg-gray-800 p-6 rounded-lg border border-gray-700 flex items-center gap-4"
           >
@@ -111,7 +115,8 @@ function Contact() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.7, duration: 0.6 }}
+          viewport={{ once: false, margin: "-100px" }}
+          transition={{ delay: 0.7, duration: 1.8, ease: "easeInOut" }}
           className="flex flex-wrap gap-4 justify-center"
         >
           <a
