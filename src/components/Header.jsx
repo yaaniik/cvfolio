@@ -20,7 +20,7 @@ function Header({ activeSection, onNavigate }) {
     setIsMenuOpen(false);
     setTimeout(() => {
       onNavigate(section);
-    }, 300);
+    }, 800);
   }, [onNavigate]);
 
   // Chiudi menu con ESC key per accessibility
