@@ -14,50 +14,50 @@ function Projects() {
       company: 'KEYTYPE',
       role: 'Full Stack Developer',
       period: 'Novembre 2024 - Aprile 2025',
-      description: 'Ho contribuito alla realizzazione di un’app per la scansione articoli e la generazione automatica di bolle di entrata, uscita e gestione carichi/scarichi. Gestione del lavoro tramite Azure DevOps, con assegnazione task e versionamento del codice usando Git (commit, branch, push), garantendo uno sviluppo efficiente e collaborativo.',
+      description: 'Ho contribuito alla realizzazione di un\'app per la scansione articoli e la generazione automatica di bolle di entrata, uscita e gestione carichi/scarichi. Gestione del lavoro tramite Azure DevOps, con assegnazione task e versionamento del codice usando Git (commit, branch, push), garantendo uno sviluppo efficiente e collaborativo.',
       tech: ['Python', 'Django', 'PostgreSQL', 'Angular', 'TypeScript', 'Prime NG', 'CSS', 'Figma', 'Azure DevOps']
     },
     {
       company: 'INGEGNERIA & SOFTWARE INDUSTRIALE',
       role: 'Full Stack Developer',
       period: 'Ottobre 2023 - Novembre 2024',
-      description: 'Ho contributo allo sviluppo e manutenzione di un sistema integrato per la gestione del personale, comprensivo di timbrature, ferie, paghe e altre funzionalità aziendali. Responsabile dell’implementazione di nuove funzionalità, della risoluzione di bug e dell’ottimizzazione delle API, con particolare attenzione alla migrazione di servizi legacy verso tecnologie più moderne per migliorare performance e scalabilità.',
+      description: 'Ho contributo allo sviluppo e manutenzione di un sistema integrato per la gestione del personale, comprensivo di timbrature, ferie, paghe e altre funzionalità aziendali. Responsabile dell\'implementazione di nuove funzionalità, della risoluzione di bug e dell\'ottimizzazione delle API, con particolare attenzione alla migrazione di servizi legacy verso tecnologie più moderne per migliorare performance e scalabilità.',
       tech: ['PHP', 'CodeIgniter', 'C#', 'ASP.NET Core', 'SQL Server', 'JavaScript', 'HTML', 'CSS']
     },
     {
       company: 'KIREY',
       role: 'Junior Full Stack Developer',
       period: 'Ottobre 2022 - Aprile 2023',
-      description: 'In questa esperienza ho tradotto in un sito web funzionale e responsivo un’interfaccia grafica fornita da un’azienda terza, assicurando coerenza con il design originale. Parallelamente, ho lavorato allo sviluppo di API per una seconda applicazione distinta, occupandomi della logica e della gestione dei dati sul lato server. Entrambe le attività sono state svolte in sinergia con il team, garantendo efficienza, qualità e integrazione fluida dei sistemi.',
+      description: 'In questa esperienza ho tradotto in un sito web funzionale e responsivo un\'interfaccia grafica fornita da un\'azienda terza, assicurando coerenza con il design originale. Parallelamente, ho lavorato allo sviluppo di API per una seconda applicazione distinta, occupandomi della logica e della gestione dei dati sul lato server. Entrambe le attività sono state svolte in sinergia con il team, garantendo efficienza, qualità e integrazione fluida dei sistemi.',
       tech: ['Java', 'Spring Boot', 'HTML', 'Bootstrap']
     }
   ];
 
   const projects = [
     {
-    title: 'Sistema di Gestione Ristorante - Full Stack',
-    description: 'Ho realizzato una piattaforma web completa per ristorante con sistema di prenotazioni online, sondaggi di soddisfazione clienti e area amministrativa multi-ruolo. Include una dashboard analytics per statistiche giornaliere, settimanali, mensili e annuali dei feedback, gestione utenti con ruoli personalizzati e un editor fotografico integrato per l\'aggiornamento dei contenuti del sito.',
-    tech: ['React', 'Vite', 'Mantine UI', 'PHP', 'JSON', 'CRUD', 'Authentication', 'Role-Based Access'],
-    category: 'Full Stack Web App',
-    github: '', // Aggiungi link quando carichi su GitHub
-    demo: '' // Aggiungi link al sito live se disponibile
-  },
-  {
-    title: 'Modello AI - Previsione Furti Chicago',
-    description: 'Ho sviluppato un modello di intelligenza artificiale su Google Colab per prevedere i furti a Chicago, utilizzando librerie Python per l\'analisi e la visualizzazione dei dati, sotto forma di grafici e mappe di calore.',
-    tech: ['Python', 'Random Forest', 'Pandas', 'Seaborn', 'Matplotlib', 'Folium'],
-    category: 'AI & Data Analysis',
-    github: '', // Aggiungi il tuo link GitHub se disponibile
-    demo: ''
-  },
-  {
-    title: 'Portfolio Personale',
-    description: 'Ho realizzato il mio sito portfolio personale, caratterizzato da un design moderno, responsivo e da animazioni fluide.',
-    tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
-    category: 'Web Development',
-    github: '', // Aggiungi il tuo link GitHub
-    demo: ''
-  }
+      title: 'Sistema di Gestione Ristorante - Full Stack',
+      description: 'Ho realizzato una piattaforma web completa per ristorante con sistema di prenotazioni online, sondaggi di soddisfazione clienti e area amministrativa multi-ruolo. Include una dashboard analytics per statistiche giornaliere, settimanali, mensili e annuali dei feedback, gestione utenti con ruoli personalizzati e un editor fotografico integrato per l\'aggiornamento dei contenuti del sito.',
+      tech: ['React', 'Vite', 'Mantine UI', 'PHP', 'JSON', 'CRUD', 'Authentication', 'Role-Based Access'],
+      category: 'Full Stack Web App',
+      github: '',
+      demo: ''
+    },
+    {
+      title: 'Modello AI - Previsione Furti Chicago',
+      description: 'Ho sviluppato un modello di intelligenza artificiale su Google Colab per prevedere i furti a Chicago, utilizzando librerie Python per l\'analisi e la visualizzazione dei dati, sotto forma di grafici e mappe di calore.',
+      tech: ['Python', 'Random Forest', 'Pandas', 'Seaborn', 'Matplotlib', 'Folium'],
+      category: 'AI & Data Analysis',
+      github: '',
+      demo: ''
+    },
+    {
+      title: 'Portfolio Personale',
+      description: 'Ho realizzato il mio sito portfolio personale, caratterizzato da un design moderno, responsivo e da animazioni fluide.',
+      tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
+      category: 'Web Development',
+      github: '',
+      demo: ''
+    }
   ];
 
   return (
@@ -67,6 +67,7 @@ function Projects() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="mb-20"
         >
@@ -78,7 +79,17 @@ function Projects() {
                 key={exp.company}
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
+                viewport={{ once: true }}
+                transition={{ 
+                  delay: index * 0.1, 
+                  duration: 0.6,
+                  ease: [0.25, 0.1, 0.25, 1]
+                }}
+                style={{
+                  backfaceVisibility: 'hidden',
+                  WebkitBackfaceVisibility: 'hidden',
+                  transform: 'translateZ(0)',
+                }}
                 className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all"
               >
                 <div className="flex items-start gap-4">
@@ -112,6 +123,7 @@ function Projects() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl font-bold mb-12 text-center">Progetti</h2>
@@ -122,7 +134,17 @@ function Projects() {
                 key={project.title}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2, duration: 0.6 }}
+                viewport={{ once: true }}
+                transition={{ 
+                  delay: index * 0.2, 
+                  duration: 0.6,
+                  ease: [0.25, 0.1, 0.25, 1]
+                }}
+                style={{
+                  backfaceVisibility: 'hidden',
+                  WebkitBackfaceVisibility: 'hidden',
+                  transform: 'translateZ(0)',
+                }}
                 className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all"
               >
                 <div className="mb-3">

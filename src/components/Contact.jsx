@@ -8,6 +8,7 @@ function Contact() {
         <motion.h2 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-4xl font-bold mb-6 text-center"
         >
@@ -16,6 +17,7 @@ function Contact() {
         <motion.p 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-gray-400 mb-12 text-center text-lg"
         >
@@ -27,8 +29,13 @@ function Contact() {
             href="mailto:yanik.dimitrov@outlook.com"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.6 }}
             whileHover={{ scale: 1.05 }}
+            style={{
+              backfaceVisibility: 'hidden',
+              WebkitBackfaceVisibility: 'hidden',
+            }}
             className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all flex items-center gap-4"
           >
             <div className="bg-blue-500/20 p-3 rounded-lg">
@@ -44,8 +51,13 @@ function Contact() {
             href="tel:+393755588385"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.6 }}
             whileHover={{ scale: 1.05 }}
+            style={{
+              backfaceVisibility: 'hidden',
+              WebkitBackfaceVisibility: 'hidden',
+            }}
             className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all flex items-center gap-4"
           >
             <div className="bg-blue-500/20 p-3 rounded-lg">
@@ -63,8 +75,13 @@ function Contact() {
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.5, duration: 0.6 }}
             whileHover={{ scale: 1.05 }}
+            style={{
+              backfaceVisibility: 'hidden',
+              WebkitBackfaceVisibility: 'hidden',
+            }}
             className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all flex items-center gap-4"
           >
             <div className="bg-blue-500/20 p-3 rounded-lg">
@@ -79,7 +96,12 @@ function Contact() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.6, duration: 0.6 }}
+            style={{
+              backfaceVisibility: 'hidden',
+              WebkitBackfaceVisibility: 'hidden',
+            }}
             className="bg-gray-800 p-6 rounded-lg border border-gray-700 flex items-center gap-4"
           >
             <div className="bg-blue-500/20 p-3 rounded-lg">
@@ -95,6 +117,7 @@ function Contact() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ delay: 0.7, duration: 0.6 }}
           className="flex flex-wrap gap-4 justify-center"
         >

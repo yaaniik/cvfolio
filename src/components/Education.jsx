@@ -74,6 +74,7 @@ function Education() {
         <motion.h2 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-4xl font-bold mb-12 text-center"
         >
@@ -90,7 +91,17 @@ function Education() {
                 key={edu.title}
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
+                viewport={{ once: true }}
+                transition={{ 
+                  delay: index * 0.1, 
+                  duration: 0.6,
+                  ease: [0.25, 0.1, 0.25, 1]
+                }}
+                style={{
+                  backfaceVisibility: 'hidden',
+                  WebkitBackfaceVisibility: 'hidden',
+                  transform: 'translateZ(0)',
+                }}
                 className={`bg-gray-800 p-6 rounded-lg border border-gray-700 ${colors.border} transition-all`}
               >
                 <div className="flex items-start gap-4">

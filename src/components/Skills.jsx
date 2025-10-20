@@ -38,6 +38,7 @@ function Skills() {
         <motion.h2 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-4xl font-bold mb-16 text-center"
         >
@@ -50,7 +51,17 @@ function Skills() {
               key={category.title}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: categoryIndex * 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
+              transition={{ 
+                delay: categoryIndex * 0.1, 
+                duration: 0.5,
+                ease: [0.25, 0.1, 0.25, 1]
+              }}
+              style={{
+                backfaceVisibility: 'hidden',
+                WebkitBackfaceVisibility: 'hidden',
+                transform: 'translateZ(0)',
+              }}
               className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all"
             >
               <h3 className="text-xl font-semibold mb-4 text-blue-400">{category.title}</h3>
