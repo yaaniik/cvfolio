@@ -62,7 +62,7 @@ function Education() {
       orange: {
         bg: 'bg-orange-500/20',
         text: 'text-orange-400',
-        border: 'hover:border-gorangereen-500'
+        border: 'hover:border-orange-500'
       }
     };
     return colors[color] || colors.blue;

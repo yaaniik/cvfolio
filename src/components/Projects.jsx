@@ -123,7 +123,6 @@ function Projects() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2, duration: 0.6 }}
-                whileHover={{ y: -10 }}
                 className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all"
               >
                 <div className="mb-3">
