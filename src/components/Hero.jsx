@@ -110,7 +110,7 @@ function Hero() {
 
               {/* Pulsante Download CV - Centrato su mobile, a sinistra su desktop */}
               <a
-                href="/CV_Yanik_Dimitrov.pdf"
+                href="/cv_yanik.pdf"
                 download="cv_yanik.pdf"
                 className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors w-full md:w-auto justify-center"
               >
