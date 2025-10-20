@@ -21,14 +21,14 @@ function Projects() {
       company: 'INGEGNERIA & SOFTWARE INDUSTRIALE',
       role: 'Full Stack Developer',
       period: 'Ottobre 2023 - Novembre 2024',
-      description: 'Ho contributo allo sviluppo e manutenzione di un sistema integrato per la gestione del personale, comprensivo di timbrature, ferie, paghe e altre funzionalità aziendali. Responsabile dell\'implementazione di nuove funzionalità, della risoluzione di bug e dell\'ottimizzazione delle API, con particolare attenzione alla migrazione di servizi legacy verso tecnologie più moderne per migliorare performance e scalabilità.',
+      description: 'Ho contributo allo sviluppo e manutenzione di un sistema integrato per la gestione del personale, comprensivo di timbrature, ferie, paghe e altre funzionalitÃ  aziendali. Responsabile dell\'implementazione di nuove funzionalitÃ , della risoluzione di bug e dell\'ottimizzazione delle API, con particolare attenzione alla migrazione di servizi legacy verso tecnologie piÃ¹ moderne per migliorare performance e scalabilitÃ .',
       tech: ['PHP', 'CodeIgniter', 'C#', 'ASP.NET Core', 'SQL Server', 'JavaScript', 'HTML', 'CSS']
     },
     {
       company: 'KIREY',
       role: 'Junior Full Stack Developer',
       period: 'Ottobre 2022 - Aprile 2023',
-      description: 'In questa esperienza ho tradotto in un sito web funzionale e responsivo un\'interfaccia grafica fornita da un\'azienda terza, assicurando coerenza con il design originale. Parallelamente, ho lavorato allo sviluppo di API per una seconda applicazione distinta, occupandomi della logica e della gestione dei dati sul lato server. Entrambe le attività sono state svolte in sinergia con il team, garantendo efficienza, qualità e integrazione fluida dei sistemi.',
+      description: 'In questa esperienza ho tradotto in un sito web funzionale e responsivo un\'interfaccia grafica fornita da un\'azienda terza, assicurando coerenza con il design originale. Parallelamente, ho lavorato allo sviluppo di API per una seconda applicazione distinta, occupandomi della logica e della gestione dei dati sul lato server. Entrambe le attivitÃ  sono state svolte in sinergia con il team, garantendo efficienza, qualitÃ  e integrazione fluida dei sistemi.',
       tech: ['Java', 'Spring Boot', 'HTML', 'Bootstrap']
     }
   ];
@@ -81,7 +81,7 @@ function Projects() {
                 transition={{ 
                   delay: index * 0.1, 
                   duration: 0.6,
-                  ease: [0.25, 0.46, 0.45, 0.94]
+                  ease: "easeOut"
                 }}
                 className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all"
               >
@@ -129,7 +129,7 @@ function Projects() {
                 transition={{ 
                   delay: index * 0.2, 
                   duration: 0.6,
-                  ease: [0.25, 0.46, 0.45, 0.94]
+                  ease: "easeOut"
                 }}
                 className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all"
               >
@@ -148,7 +148,6 @@ function Projects() {
                   ))}
                 </div>
 
-                {/* Link ai progetti */}
                 {(project.github || project.demo) && (
                   <div className="flex gap-4 pt-4 border-t border-gray-700">
                     {project.github && (

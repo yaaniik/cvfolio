@@ -30,7 +30,7 @@ function Contact() {
             transition={{ 
               delay: 0.3, 
               duration: 0.6,
-              ease: [0.25, 0.46, 0.45, 0.94]
+              ease: "easeOut"
             }}
             whileHover={{ scale: 1.05 }}
             className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all flex items-center gap-4"
@@ -51,7 +51,7 @@ function Contact() {
             transition={{ 
               delay: 0.4, 
               duration: 0.6,
-              ease: [0.25, 0.46, 0.45, 0.94]
+              ease: "easeOut"
             }}
             whileHover={{ scale: 1.05 }}
             className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all flex items-center gap-4"
@@ -74,7 +74,7 @@ function Contact() {
             transition={{ 
               delay: 0.5, 
               duration: 0.6,
-              ease: [0.25, 0.46, 0.45, 0.94]
+              ease: "easeOut"
             }}
             whileHover={{ scale: 1.05 }}
             className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all flex items-center gap-4"
@@ -94,7 +94,7 @@ function Contact() {
             transition={{ 
               delay: 0.6, 
               duration: 0.6,
-              ease: [0.25, 0.46, 0.45, 0.94]
+              ease: "easeOut"
             }}
             className="bg-gray-800 p-6 rounded-lg border border-gray-700 flex items-center gap-4"
           >
@@ -114,7 +114,6 @@ function Contact() {
           transition={{ delay: 0.7, duration: 0.6 }}
           className="flex flex-wrap gap-4 justify-center"
         >
-          
           <a
             href="mailto:yanik.dimitrov@outlook.com"
             className="inline-block bg-purple-500 hover:bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors"
@@ -122,7 +121,6 @@ function Contact() {
             Invia una Email
           </a>
 
-          
           <a
             href="/cv_yanik.pdf"
             download="cv_yanik.pdf"

@@ -93,7 +93,7 @@ function Education() {
                 transition={{ 
                   delay: index * 0.1, 
                   duration: 0.6,
-                  ease: [0.25, 0.46, 0.45, 0.94]
+                  ease: "easeOut"
                 }}
                 className={`bg-gray-800 p-6 rounded-lg border border-gray-700 ${colors.border} transition-all`}
               >
@@ -115,7 +115,6 @@ function Education() {
                     
                     <p className="text-gray-300 mb-4">{edu.description}</p>
                     
-                    {/* Sotto-corsi (se presenti) */}
                     {edu.subCourses && (
                       <div className="mb-4 pl-4 border-l-2 border-gray-700">
                         {edu.subCourses.map((subCourse, idx) => (
@@ -130,7 +129,6 @@ function Education() {
                       </div>
                     )}
                     
-                    {/* Competenze acquisite */}
                     <div className="flex flex-wrap gap-2">
                       {edu.skills.map(skill => (
                         <span 
