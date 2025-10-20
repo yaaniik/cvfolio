@@ -5,7 +5,7 @@ function Experience() {
   const experiences = [
     {
       company: 'FREELANCE',
-      role: 'Web Developer',
+      role: 'Freelance Web Developer',
       period: 'Dicembre 2022 - Presente',
       description: 'Sviluppo soluzioni web personalizzate per piccole e medie imprese, dalla progettazione alla realizzazione di siti web e applicazioni digitali.',
       tech: ['React', 'JavaScript', 'HTML', 'CSS', 'Mantine UI', 'Bootstrap', 'Tailwind CSS', 'Figma']
