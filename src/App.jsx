@@ -21,16 +21,43 @@ const SectionLoader = () => (
 function App() {
   const [activeSection, setActiveSection] = useState('home');
 
+  // SCROLL ULTRA SMOOTH E CAZZUTO
   const scrollToSection = useCallback((sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      // Calcola la posizione target
+      const targetPosition = element.offsetTop;
+      const startPosition = window.scrollY;
+      const distance = targetPosition - startPosition;
+      const duration = 1200; // 1.2 secondi - SMOOTH E CAZZUTO
+      let start = null;
+
+      // Easing function per uno scroll super smooth
+      const easeInOutCubic = (t) => {
+        return t < 0.5
+          ? 4 * t * t * t
+          : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      };
+
+      // Animazione custom
+      const animation = (currentTime) => {
+        if (start === null) start = currentTime;
+        const timeElapsed = currentTime - start;
+        const progress = Math.min(timeElapsed / duration, 1);
+        
+        const ease = easeInOutCubic(progress);
+        window.scrollTo(0, startPosition + distance * ease);
+
+        if (progress < 1) {
+          requestAnimationFrame(animation);
+        } else {
+          // Focus sull'elemento dopo lo scroll per accessibility
+          element.focus({ preventScroll: true });
+        }
+      };
+
+      requestAnimationFrame(animation);
       setActiveSection(sectionId);
-      
-      // Migliora accessibility: focus sull'elemento dopo lo scroll
-      setTimeout(() => {
-        element.focus({ preventScroll: true });
-      }, 500);
     }
   }, []);
 
