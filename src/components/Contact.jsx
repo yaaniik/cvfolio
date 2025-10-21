@@ -176,16 +176,6 @@ function Contact() {
             Scarica CV
           </a>
         </motion.div>
-
-        {/* Divider decorativo */}
-        <div
-          className="mt-16 pt-8 border-t border-gray-700/50"
-          aria-hidden="true"
-        >
-          <p className="text-center text-gray-500 text-sm">
-            💼 Rispondo entro 24 ore · 🚀 Disponibile da subito
-          </p>
-        </div>
       </div>
     </section>
   );
