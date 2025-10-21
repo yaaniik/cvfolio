@@ -14,6 +14,16 @@ function Hero() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Testo */}
           <div>
+            {/* Schema.org Person markup per SEO */}
+            <div itemScope itemType="https://schema.org/Person" className="hidden">
+              <span itemProp="name">Yanik Dimitrov</span>
+              <span itemProp="jobTitle">Full Stack Developer</span>
+              <span itemProp="url">https://yanikdimitrov.com</span>
+              <span itemProp="email">yanik.dimitrov@outlook.com</span>
+              <span itemProp="telephone">+39 375 558 8385</span>
+              <link itemProp="sameAs" href="https://linkedin.com/in/yanik-dimitrov/" />
+            </div>
+
             <motion.h1
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -28,6 +38,7 @@ function Hero() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
               className="text-2xl md:text-3xl text-gray-300 mb-8 font-light"
+              role="doc-subtitle"
             >
               Full Stack Developer
             </motion.p>
@@ -38,13 +49,16 @@ function Hero() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
               className="flex justify-center md:hidden mb-8"
+              aria-hidden="true"
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full blur-3xl opacity-20"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full blur-3xl opacity-20" aria-hidden="true"></div>
                 <img
                   src="/ya_cv.jpg"
-                  alt="Yanik Dimitrov"
+                  alt="Yanik Dimitrov - Full Stack Developer specializzato in React, Java e Python"
                   loading="eager"
+                  width="256"
+                  height="256"
                   className="relative w-64 h-64 object-cover object-[50%_45%] rounded-full border-4 border-gray-700 shadow-2xl"
                   style={{
                     imageRendering: 'high-quality',
@@ -83,38 +97,50 @@ function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.8 }}
               className="flex flex-wrap gap-4 items-center justify-center md:justify-start"
+              role="list"
+              aria-label="Link ai contatti e profili social"
             >
+              
               <a
                 href="https://linkedin.com/in/yanik-dimitrov/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-blue-400 transition-colors"
+                className="flex items-center gap-2 hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded px-2 py-1"
+                aria-label="Visita il mio profilo LinkedIn (si apre in una nuova scheda)"
               >
-                <Linkedin size={24} />
+                <Linkedin size={24} aria-hidden="true" />
                 <span className="text-sm">LinkedIn</span>
               </a>
+              
+              
               <a
                 href="mailto:yanik.dimitrov@outlook.com"
-                className="flex items-center gap-2 hover:text-blue-400 transition-colors"
+                className="flex items-center gap-2 hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded px-2 py-1"
+                aria-label="Inviami una email a yanik.dimitrov@outlook.com"
               >
-                <Mail size={24} />
+                <Mail size={24} aria-hidden="true" />
                 <span className="text-sm">Email</span>
               </a>
+              
+              
               <a
                 href="tel:+393755588385"
-                className="flex items-center gap-2 hover:text-blue-400 transition-colors"
+                className="flex items-center gap-2 hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded px-2 py-1"
+                aria-label="Chiamami al +39 375 558 8385"
               >
-                <Phone size={24} />
+                <Phone size={24} aria-hidden="true" />
                 <span className="text-sm">+39 375 558 8385</span>
               </a>
 
-              {/* Pulsante Download CV - Centrato su mobile, a sinistra su desktop */}
+              {/* Pulsante Download CV */}
+              
               <a
-                href="/cv_yanik.pdf"
-                download="cv_yanik.pdf"
-                className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors w-full md:w-auto justify-center"
+                href="/CV_Yanik_Dimitrov.pdf"
+                download="CV_Yanik_Dimitrov.pdf"
+                className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors w-full md:w-auto justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+                aria-label="Scarica il mio CV in formato PDF"
               >
-                <Download size={20} />
+                <Download size={20} aria-hidden="true" />
                 <span>Scarica CV</span>
               </a>
             </motion.div>
@@ -126,13 +152,16 @@ function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
             className="hidden md:flex justify-center"
+            aria-hidden="true"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full blur-3xl opacity-20"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full blur-3xl opacity-20" aria-hidden="true"></div>
               <img
                 src="/ya_cv.jpg"
-                alt="Yanik Dimitrov"
+                alt="Yanik Dimitrov - Full Stack Developer specializzato in React, Java e Python"
                 loading="eager"
+                width="320"
+                height="320"
                 className="relative w-80 h-80 object-cover object-[50%_45%] rounded-full border-4 border-gray-700 shadow-2xl"
                 style={{
                   imageRendering: 'high-quality',
