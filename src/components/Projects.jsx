@@ -1,5 +1,125 @@
-import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { ExternalLink, Github, Folder } from 'lucide-react';
+import { useRef } from 'react';
+
+function ProjectCard({ project, index }) {
+  const cardRef = useRef(null);
+  
+  // Track scroll position della card rispetto al viewport
+  const { scrollYProgress } = useScroll({
+    target: cardRef,
+    offset: ["start end", "end start"]
+  });
+
+  // EFFETTO SPOTLIGHT - Border opacity graduale (VIOLA)
+  const borderOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.4, 0.5, 0.6, 0.8, 1],
+    [0, 0.2, 0.7, 1, 0.7, 0.2, 0]
+  );
+
+  return (
+    <motion.article
+      ref={cardRef}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ 
+        delay: index * 0.15, 
+        duration: 1.8,
+        ease: "easeInOut"
+      }}
+      className="bg-gray-800 p-6 rounded-lg border border-gray-700 relative overflow-hidden"
+    >
+      {/* Border animato - colorazione graduale VIOLA */}
+      <motion.div
+        className="absolute inset-0 rounded-lg pointer-events-none"
+        style={{
+          opacity: borderOpacity,
+          border: '1px solid rgb(168, 85, 247)', // purple-500
+          boxShadow: '0 0 30px rgba(168, 85, 247, 0.5), inset 0 0 20px rgba(168, 85, 247, 0.1)',
+        }}
+        aria-hidden="true"
+      />
+
+      <div className="flex items-start gap-4">
+        <div 
+          className="bg-purple-500/20 p-3 rounded-lg flex-shrink-0"
+          aria-hidden="true"
+        >
+          <Folder className="text-purple-400" size={24} />
+        </div>
+        
+        <div className="flex-1">
+          <div className="flex flex-wrap justify-between items-start mb-2 gap-2">
+            <div className="flex-1">
+              <div className="mb-2">
+                <span 
+                  className="text-xs bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full"
+                  role="status"
+                  aria-label={`Categoria: ${project.category}`}
+                >
+                  {project.category}
+                </span>
+              </div>
+              <h3 className="text-xl font-bold text-white">{project.title}</h3>
+            </div>
+          </div>
+          
+          <p className="text-gray-300 mb-4">{project.description}</p>
+          
+          <div 
+            className="flex flex-wrap gap-2 mb-4"
+            role="list"
+            aria-label="Tecnologie utilizzate nel progetto"
+          >
+            {project.tech.map(tech => (
+              <span 
+                key={tech} 
+                className="bg-gray-700 px-3 py-1 rounded-full text-sm text-purple-300 hover:bg-gray-600 transition-colors"
+                role="listitem"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          {(project.github || project.demo) && (
+            <div 
+              className="flex gap-4"
+              role="group"
+              aria-label="Link al progetto"
+            >
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-gray-300 hover:text-purple-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded px-2 py-1"
+                  aria-label={`Visualizza ${project.title} su GitHub (si apre in una nuova scheda)`}
+                >
+                  <Github size={20} aria-hidden="true" />
+                  <span className="text-sm">GitHub</span>
+                </a>
+              )}
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-gray-300 hover:text-purple-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded px-2 py-1"
+                  aria-label={`Visualizza demo di ${project.title} (si apre in una nuova scheda)`}
+                >
+                  <ExternalLink size={20} aria-hidden="true" />
+                  <span className="text-sm">Demo</span>
+                </a>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+    </motion.article>
+  );
+}
 
 function Projects() {
   const projects = [
@@ -25,14 +145,19 @@ function Projects() {
       tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
       category: 'Web Development',
       github: '',
-      demo: ''
+      demo: typeof window !== 'undefined' ? window.location.origin : ''
     }
   ];
 
   return (
-    <section id="progetti" className="py-20 px-6">
+    <section 
+      id="progetti" 
+      className="py-20 px-6"
+      aria-labelledby="projects-heading"
+    >
       <div className="max-w-6xl mx-auto">
         <motion.h2 
+          id="projects-heading"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
@@ -41,61 +166,17 @@ function Projects() {
           Progetti
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div 
+          className="space-y-6"
+          role="list"
+          aria-label="Lista progetti"
+        >
           {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ 
-                delay: index * 0.2, 
-                duration: 1.8,
-                ease: "easeInOut"
-              }}
-              className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500"
-            >
-              <div className="mb-3">
-                <span className="text-xs bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full">
-                  {project.category}
-                </span>
-              </div>
-              <h3 className="text-xl font-bold mb-3">{project.title}</h3>
-              <p className="text-gray-400 mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.tech.map(tech => (
-                  <span key={tech} className="text-sm bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              {(project.github || project.demo) && (
-                <div className="flex gap-4 pt-4 border-t border-gray-700">
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors"
-                    >
-                      <Github size={20} />
-                      <span className="text-sm">GitHub</span>
-                    </a>
-                  )}
-                  {project.demo && (
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors"
-                    >
-                      <ExternalLink size={20} />
-                      <span className="text-sm">Demo</span>
-                    </a>
-                  )}
-                </div>
-              )}
-            </motion.div>
+            <ProjectCard 
+              key={project.title} 
+              project={project} 
+              index={index}
+            />
           ))}
         </div>
       </div>

@@ -35,7 +35,7 @@ function ExperienceCard({ exp, index }) {
         className="absolute inset-0 rounded-lg pointer-events-none"
         style={{
           opacity: borderOpacity,
-          border: '3px solid rgb(59, 130, 246)',
+          border: '1px solid rgb(59, 130, 246)',
           boxShadow: '0 0 30px rgba(59, 130, 246, 0.5), inset 0 0 20px rgba(59, 130, 246, 0.1)',
         }}
         aria-hidden="true"
@@ -73,7 +73,7 @@ function ExperienceCard({ exp, index }) {
             {exp.tech.map(tech => (
               <span 
                 key={tech} 
-                className="text-xs bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full"
+                className="bg-gray-700 px-3 py-1 rounded-full text-sm text-blue-300 hover:bg-gray-600 transition-colors"
                 role="listitem"
               >
                 {tech}
