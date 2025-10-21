@@ -4,7 +4,7 @@ import { useRef } from 'react';
 
 function EducationCard({ edu, index }) {
   const cardRef = useRef(null);
-  
+
   // Track scroll position della card rispetto al viewport
   const { scrollYProgress } = useScroll({
     target: cardRef,
@@ -51,8 +51,8 @@ function EducationCard({ edu, index }) {
       ref={cardRef}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ 
-        delay: index * 0.15, 
+      transition={{
+        delay: index * 0.15,
         duration: 1.8,
         ease: "easeInOut"
       }}
@@ -71,13 +71,13 @@ function EducationCard({ edu, index }) {
 
       <div className="flex items-start gap-4">
         {/* Icona a sinistra */}
-        <div 
+        <div
           className={`${colorConfig.bg} p-3 rounded-lg flex-shrink-0`}
           aria-hidden="true"
         >
           <Icon className={colorConfig.text} size={24} />
         </div>
-        
+
         {/* Contenuto a destra */}
         <div className="flex-1">
           <div className="flex flex-wrap justify-between items-start mb-2 gap-2">
@@ -86,7 +86,7 @@ function EducationCard({ edu, index }) {
               <p className={`${colorConfig.text} font-semibold`}>{edu.institution}</p>
             </div>
             <div className="text-right">
-              <time 
+              <time
                 dateTime={edu.dateTime}
                 className="text-gray-400 text-sm block"
               >
@@ -95,19 +95,19 @@ function EducationCard({ edu, index }) {
               <span className="text-gray-500 text-xs">{edu.duration}</span>
             </div>
           </div>
-          
+
           <p className="text-gray-300 mb-4">{edu.description}</p>
-          
+
           {/* Sub-corsi (se presenti) */}
           {edu.subCourses && (
-            <div 
+            <div
               className="mb-4 pl-4 border-l-2 border-gray-700"
               role="list"
               aria-label="Moduli del corso"
             >
               {edu.subCourses.map((subCourse, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="mb-2 last:mb-0"
                   role="listitem"
                 >
@@ -115,7 +115,7 @@ function EducationCard({ edu, index }) {
                     <span className="text-gray-300 font-medium text-sm">{subCourse.name}</span>
                     <span className="text-gray-500 text-xs whitespace-nowrap">{subCourse.hours}</span>
                   </div>
-                  <time 
+                  <time
                     dateTime={subCourse.dateTime}
                     className="text-gray-500 text-xs"
                   >
@@ -125,23 +125,19 @@ function EducationCard({ edu, index }) {
               ))}
             </div>
           )}
-          
+
           {/* Competenze acquisite */}
-          <div 
+          <div
             className="flex flex-wrap gap-2"
             role="list"
             aria-label={`Competenze acquisite in ${edu.title}`}
           >
             {edu.skills.map(skill => (
-              <span 
-                key={skill} 
+              <span
+                key={skill}
                 className={`bg-gray-700 px-3 py-1 rounded-full text-sm ${colorConfig.text} hover:bg-gray-600 transition-colors`}
                 role="listitem"
               >
-
-
-
-
                 {skill}
               </span>
             ))}
@@ -204,13 +200,13 @@ function Education() {
   ];
 
   return (
-    <section 
-      id="formazione" 
+    <section
+      id="formazione"
       className="py-20 px-6 bg-gray-800/30"
       aria-labelledby="education-heading"
     >
       <div className="max-w-6xl mx-auto">
-        <motion.h2 
+        <motion.h2
           id="education-heading"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -219,16 +215,16 @@ function Education() {
         >
           Formazione
         </motion.h2>
-        
-        <div 
+
+        <div
           className="space-y-6"
           role="list"
           aria-label="Lista percorsi di formazione"
         >
           {education.map((edu, index) => (
-            <EducationCard 
-              key={edu.title} 
-              edu={edu} 
+            <EducationCard
+              key={edu.title}
+              edu={edu}
               index={index}
             />
           ))}
