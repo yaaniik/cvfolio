@@ -167,19 +167,7 @@ npm i -g vercel
 vercel
 ```
 
-### Netlify
-```bash
-# Build command
-npm run build
-
-# Publish directory
-dist
-```
-
-
 ## 🤝 Contatti
 
 - **Email**: [yanik.dimitrov@outlook.com](mailto:yanik.dimitrov@outlook.com)
 - **LinkedIn**: [yanik-dimitrov](https://linkedin.com/in/yanik-dimitrov/)
-- **Telefono**: +39 375 558 8385
-- **Location**: Roma, Italia
