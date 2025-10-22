@@ -128,7 +128,7 @@ function Projects() {
       description: 'Ho realizzato una piattaforma web completa per ristorante con sistema di prenotazioni online, sondaggi di soddisfazione clienti e area amministrativa multi-ruolo. Include una dashboard analytics per statistiche giornaliere, settimanali, mensili e annuali dei feedback, gestione utenti con ruoli personalizzati e un editor fotografico integrato per l\'aggiornamento dei contenuti del sito.',
       tech: ['React', 'Vite', 'Mantine UI', 'PHP', 'JSON', 'CRUD', 'Authentication', 'Role-Based Access'],
       category: 'Full Stack Web App',
-      github: '',
+      github: 'https://github.com/yaaniik/restaurant-kilo-casestudy',
       demo: ''
     },
     {
@@ -145,7 +145,7 @@ function Projects() {
       tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
       category: 'Web Development',
       github: 'https://github.com/yaaniik/cvfolio',
-      demo: typeof window !== 'undefined' ? window.location.origin : ''
+      demo: ''
     }
   ];
 

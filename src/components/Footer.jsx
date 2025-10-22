@@ -47,11 +47,11 @@ function Footer() {
           
           {/* Made with love */}
           <p className="text-gray-600 text-xs flex items-center justify-center gap-2">
-            <span>Sviluppato con</span>
+            <span>Realizzato con</span>
             <Heart className="text-purple-400 fill-purple-400" size={14} aria-hidden="true" />
             <span>e</span>
             <Code2 className="text-blue-400" size={14} aria-hidden="true" />
-            <span>a Roma</span>
+            <span>!</span>
           </p>
         </motion.div>
 
