@@ -12,7 +12,9 @@
 </div>
 
 ---
+<img width="1906" height="950" alt="image" src="https://github.com/user-attachments/assets/0f3feec5-caad-411b-a078-8f22ec69b11d" />
 
+---
 ## 📖 Descrizione
 
 Portfolio personale professionale sviluppato con React, Vite e Tailwind CSS. 
