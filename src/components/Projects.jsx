@@ -136,7 +136,7 @@ function Projects() {
       description: 'Ho sviluppato un modello di intelligenza artificiale su Google Colab per prevedere i furti a Chicago, utilizzando librerie Python per l\'analisi e la visualizzazione dei dati, sotto forma di grafici e mappe di calore.',
       tech: ['Python', 'Random Forest', 'Pandas', 'Seaborn', 'Matplotlib', 'Folium'],
       category: 'AI & Data Analysis',
-      github: '',
+      github: 'https://github.com/yaaniik/chicago-crime-prediction',
       demo: ''
     },
     {
