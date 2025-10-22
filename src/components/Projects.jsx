@@ -144,7 +144,7 @@ function Projects() {
       description: 'Ho realizzato il mio sito portfolio personale, caratterizzato da un design moderno, responsivo e da animazioni fluide.',
       tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
       category: 'Web Development',
-      github: '',
+      github: 'https://github.com/yaaniik/cvfolio',
       demo: typeof window !== 'undefined' ? window.location.origin : ''
     }
   ];
