@@ -1,4 +1,4 @@
-# 💼 Portfolio Personale - Yanik Dimitrov
+# CV/Portfolio Personale
 
 <div align="center">
   
