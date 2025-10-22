@@ -7,12 +7,14 @@
 ![Vite](https://img.shields.io/badge/Vite-5.4.11-646CFF?logo=vite)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4.17-38B2AC?logo=tailwind-css)
 
-**[🌐 Live Demo](https://yanikdimitrov.vercel.app/)** • **[📧 Contattami](mailto:yanik.dimitrov@outlook.com)** • **[💼 LinkedIn](https://linkedin.com/in/yanik-dimitrov/)**
+**[🌐 Visualizza Sito Live](https://yanikdimitrov.vercel.app/)** • **[📧 Contattami](mailto:yanik.dimitrov@outlook.com)** • **[💼 LinkedIn](https://linkedin.com/in/yanik-dimitrov/)**
 
 </div>
 
 ---
+<img width="1906" height="950" alt="image" src="https://github.com/user-attachments/assets/0f3feec5-caad-411b-a078-8f22ec69b11d" />
 
+---
 ## 📖 Descrizione
 
 Portfolio personale professionale sviluppato con React, Vite e Tailwind CSS. 
@@ -58,13 +60,8 @@ Scroll-based animation che evidenzia le card al centro viewport con border color
 - 🟣 **Viola** per Projects  
 - 🟠 **Arancione** per Skills
 - 🎨 **Multi-color** per Education
+- 🔥 Animazione di scroll personalizzata con easing cubic per una navigazione fluida
 
-### Custom Smooth Scroll
-Animazione di scroll personalizzata con easing cubic per una navigazione fluida:
-```javascript
-const easeInOutCubic = (t) => 
-  t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-```
 ## 2️⃣ Quick Start
 
 ### Prerequisiti
@@ -75,10 +72,10 @@ const easeInOutCubic = (t) =>
 ### Installazione
 ```bash
 # Clone repository
-git clone https://github.com/TUO-USERNAME/portfolio.git
+git clone https://github.com/TUO-USERNAME/cvfolio.git
 
 # Entra nella cartella
-cd portfolio
+cd cvfolio
 
 # Installa dipendenze
 npm install
@@ -102,7 +99,7 @@ npm run preview
 
 ## 3️⃣ Struttura Progetto
 ```
-portfolio/
+cvfolio/
 ├── public/
 │   ├── ya_cv.jpg              # Foto profilo
 │   └── CV_Yanik_Dimitrov.pdf  # CV scaricabile
@@ -148,13 +145,6 @@ portfolio/
 <img width="905" height="516" alt="image" src="https://github.com/user-attachments/assets/9856e438-c1e6-4c58-b4d8-a700029e457f" />
 
 ---
-
-### Responsive Breakpoints
-```css
-- Mobile: < 640px
-- Tablet: 640px - 1024px
-- Desktop: > 1024px
-```
 
 ## 🌐 Deploy
 
