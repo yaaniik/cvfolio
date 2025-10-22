@@ -18,7 +18,7 @@
 Portfolio personale professionale sviluppato con React, Vite e Tailwind CSS. 
 Design moderno, responsive e animazioni fluide con Framer Motion.
 
-### ✨ Features Principali
+### 1️⃣ Features Principali
 
 - 🎨 **Design Moderno** - UI/UX curata con gradients e glassmorphism
 - 📱 **Fully Responsive** - Perfetto su mobile, tablet e desktop
@@ -33,7 +33,7 @@ Design moderno, responsive e animazioni fluide con Framer Motion.
 
 ## 🎨 Features Dettagliate
 
-### 1️⃣ Effetto Spotlight Animato
+### Effetto Spotlight Animato
 Scroll-based animation che evidenzia le card al centro viewport con border colorati:
 - 🔵 **Blu** per Experience
 - 🟣 **Viola** per Projects  
