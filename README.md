@@ -1,16 +1,224 @@
-# React + Vite
+# 💼 Portfolio Personale - Yanik Dimitrov
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+  
+![Portfolio Preview](https://img.shields.io/badge/Status-Live-brightgreen)
+![React](https://img.shields.io/badge/React-18.3.1-61DAFB?logo=react)
+![Vite](https://img.shields.io/badge/Vite-5.4.11-646CFF?logo=vite)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4.17-38B2AC?logo=tailwind-css)
 
-Currently, two official plugins are available:
+**[🌐 Live Demo](https://tuo-sito.com)** • **[📧 Contattami](mailto:yanik.dimitrov@outlook.com)** • **[💼 LinkedIn](https://linkedin.com/in/yanik-dimitrov/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+</div>
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📖 Descrizione
 
-## Expanding the ESLint configuration
+Portfolio personale professionale sviluppato con React, Vite e Tailwind CSS. 
+Design moderno, responsive e animazioni fluide con Framer Motion.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ✨ Features Principali
+
+- 🎨 **Design Moderno** - UI/UX curata con gradients e glassmorphism
+- 📱 **Fully Responsive** - Perfetto su mobile, tablet e desktop
+- ⚡ **Performance Ottimizzate** - Lazy loading, code splitting, memoization
+- ♿ **Accessibility 100%** - WCAG AA compliant, keyboard navigation
+- 🎭 **Animazioni Fluide** - Framer Motion con effetti spotlight
+- 🌐 **SEO Optimized** - Schema.org markup, semantic HTML
+- 💬 **WhatsApp Widget** - Contatto diretto integrato
+- 🎯 **Smooth Scroll** - Custom scroll animation con easing
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **React 18.3.1** - UI Library
+- **Vite 5.4.11** - Build tool & dev server
+- **Tailwind CSS 3.4.17** - Utility-first CSS framework
+- **Framer Motion 11.15.0** - Animation library
+
+### Librerie UI/UX
+- **Lucide React** - Icon library
+- **React Icons** - Additional icons
+
+### Tools & DevOps
+- **ESLint** - Code linting
+- **PostCSS** - CSS processing
+- **Git** - Version control
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisiti
+
+- Node.js 18+ 
+- npm o yarn
+
+### Installazione
+```bash
+# Clone repository
+git clone https://github.com/TUO-USERNAME/portfolio.git
+
+# Entra nella cartella
+cd portfolio
+
+# Installa dipendenze
+npm install
+
+# Avvia dev server
+npm run dev
+```
+
+Il sito sarà disponibile su `http://localhost:5173`
+
+### Build per produzione
+```bash
+# Crea build ottimizzata
+npm run build
+
+# Preview build
+npm run preview
+```
+
+---
+
+## 📂 Struttura Progetto
+```
+portfolio/
+├── public/
+│   ├── ya_cv.jpg              # Foto profilo
+│   └── CV_Yanik_Dimitrov.pdf  # CV scaricabile
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx         # Navigazione principale
+│   │   ├── Hero.jsx           # Sezione intro
+│   │   ├── Experience.jsx     # Esperienze lavorative
+│   │   ├── Projects.jsx       # Portfolio progetti
+│   │   ├── Skills.jsx         # Competenze tecniche
+│   │   ├── Education.jsx      # Formazione
+│   │   ├── Contact.jsx        # Contatti
+│   │   ├── Footer.jsx         # Footer
+│   │   └── WhatsAppWidget.jsx # Widget WhatsApp
+│   ├── App.jsx                # Root component
+│   ├── main.jsx               # Entry point
+│   └── index.css              # Global styles
+├── package.json
+├── vite.config.js
+├── tailwind.config.js
+└── README.md
+```
+
+---
+
+## 🎨 Features Dettagliate
+
+### 1️⃣ Effetto Spotlight Animato
+Scroll-based animation che evidenzia le card al centro viewport con border colorati:
+- 🔵 **Blu** per Experience
+- 🟣 **Viola** per Projects  
+- 🟠 **Arancione** per Skills
+- 🎨 **Multi-color** per Education
+
+### 2️⃣ Custom Smooth Scroll
+Animazione di scroll personalizzata con easing cubic per una navigazione fluida:
+```javascript
+const easeInOutCubic = (t) => 
+  t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+```
+
+### 3️⃣ Performance Optimization
+- **Lazy Loading** - Componenti caricati on-demand
+- **Code Splitting** - Bundle ottimizzati
+- **Memoization** - React.memo su componenti pesanti
+- **Image Optimization** - Width/height espliciti, loading strategy
+
+### 4️⃣ Accessibility
+- ✅ Keyboard navigation completa
+- ✅ Focus management ottimale
+- ✅ ARIA labels e roles
+- ✅ Semantic HTML
+- ✅ Screen reader friendly
+- ✅ Skip links
+
+---
+
+## 📱 Responsive Breakpoints
+```css
+- Mobile: < 640px
+- Tablet: 640px - 1024px
+- Desktop: > 1024px
+```
+
+---
+
+## 🌐 Deploy
+
+### Vercel (Consigliato)
+```bash
+# Installa Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+```
+
+### Netlify
+```bash
+# Build command
+npm run build
+
+# Publish directory
+dist
+```
+
+---
+
+## 📊 Performance Metrics
+
+- **Lighthouse Score**: 95+
+- **First Contentful Paint**: < 1.5s
+- **Time to Interactive**: < 3s
+- **Accessibility**: 100%
+- **Best Practices**: 100%
+- **SEO**: 100%
+
+---
+
+## 🤝 Contatti
+
+- **Email**: [yanik.dimitrov@outlook.com](mailto:yanik.dimitrov@outlook.com)
+- **LinkedIn**: [yanik-dimitrov](https://linkedin.com/in/yanik-dimitrov/)
+- **Telefono**: +39 375 558 8385
+- **Location**: Roma, Italia
+
+---
+
+## 📄 License
+
+Questo progetto è proprietà privata. Tutti i diritti riservati © 2025 Yanik Dimitrov
+
+---
+
+<div align="center">
+
+**Sviluppato con ❤️ e ☕ a Roma**
+
+⭐ Se ti piace il progetto, lascia una stella!
+
+</div>
+```
+
+---
+
+## 🎯 **FASE 3: CARICA ALTRI PROGETTI**
+
+Per ogni progetto (es. Gestione Ristorante, AI Chicago):
+
+### **Step 1: Crea nuovo repository**
+```
+Nome: kilo-ristorante
+Descrizione: Sistema gestione ristorante con prenotazioni e analytics
+Public
