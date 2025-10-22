@@ -143,14 +143,18 @@ portfolio/
 
 ---
 
+## 📊 Performance Metrics
+
+<img width="905" height="516" alt="image" src="https://github.com/user-attachments/assets/9856e438-c1e6-4c58-b4d8-a700029e457f" />
+
+---
+
 ### Responsive Breakpoints
 ```css
 - Mobile: < 640px
 - Tablet: 640px - 1024px
 - Desktop: > 1024px
 ```
-
----
 
 ## 🌐 Deploy
 
@@ -172,18 +176,6 @@ npm run build
 dist
 ```
 
----
-
-## 📊 Performance Metrics
-
-- **Lighthouse Score**: 95+
-- **First Contentful Paint**: < 1.5s
-- **Time to Interactive**: < 3s
-- **Accessibility**: 100%
-- **Best Practices**: 100%
-- **SEO**: 100%
-
----
 
 ## 🤝 Contatti
 
