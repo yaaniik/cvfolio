@@ -7,7 +7,7 @@
 ![Vite](https://img.shields.io/badge/Vite-5.4.11-646CFF?logo=vite)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4.17-38B2AC?logo=tailwind-css)
 
-**[🌐 Live Demo](https://tuo-sito.com)** • **[📧 Contattami](mailto:yanik.dimitrov@outlook.com)** • **[💼 LinkedIn](https://linkedin.com/in/yanik-dimitrov/)**
+**[🌐 Live Demo](https://yanikdimitrov.vercel.app/)** • **[📧 Contattami](mailto:yanik.dimitrov@outlook.com)** • **[💼 LinkedIn](https://linkedin.com/in/yanik-dimitrov/)**
 
 </div>
 
@@ -30,6 +30,23 @@ Design moderno, responsive e animazioni fluide con Framer Motion.
 - 🎯 **Smooth Scroll** - Custom scroll animation con easing
 
 ---
+
+## 🎨 Features Dettagliate
+
+### 1️⃣ Effetto Spotlight Animato
+Scroll-based animation che evidenzia le card al centro viewport con border colorati:
+- 🔵 **Blu** per Experience
+- 🟣 **Viola** per Projects  
+- 🟠 **Arancione** per Skills
+- 🎨 **Multi-color** per Education
+
+### 2️⃣ Custom Smooth Scroll
+Animazione di scroll personalizzata con easing cubic per una navigazione fluida:
+```javascript
+const easeInOutCubic = (t) => 
+  t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+```
+
 
 ## 🛠️ Tech Stack
 
@@ -110,25 +127,6 @@ portfolio/
 ├── tailwind.config.js
 └── README.md
 ```
-
----
-
-## 🎨 Features Dettagliate
-
-### 1️⃣ Effetto Spotlight Animato
-Scroll-based animation che evidenzia le card al centro viewport con border colorati:
-- 🔵 **Blu** per Experience
-- 🟣 **Viola** per Projects  
-- 🟠 **Arancione** per Skills
-- 🎨 **Multi-color** per Education
-
-### 2️⃣ Custom Smooth Scroll
-Animazione di scroll personalizzata con easing cubic per una navigazione fluida:
-```javascript
-const easeInOutCubic = (t) => 
-  t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-```
-
 ### 3️⃣ Performance Optimization
 - **Lazy Loading** - Componenti caricati on-demand
 - **Code Splitting** - Bundle ottimizzati
@@ -193,19 +191,3 @@ dist
 - **LinkedIn**: [yanik-dimitrov](https://linkedin.com/in/yanik-dimitrov/)
 - **Telefono**: +39 375 558 8385
 - **Location**: Roma, Italia
-
----
-
-## 📄 License
-
-Questo progetto è proprietà privata. Tutti i diritti riservati © 2025 Yanik Dimitrov
-
----
-
-<div align="center">
-
-**Sviluppato con ❤️ e ☕ a Roma**
-
-⭐ Se ti piace il progetto, lascia una stella!
-
-</div>
