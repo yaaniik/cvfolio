@@ -102,7 +102,7 @@ npm run preview
 
 ## 3️⃣ Struttura Progetto
 ```
-portfolio/
+cvfolio/
 ├── public/
 │   ├── ya_cv.jpg              # Foto profilo
 │   └── CV_Yanik_Dimitrov.pdf  # CV scaricabile
