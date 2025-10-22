@@ -18,6 +18,25 @@
 Portfolio personale professionale sviluppato con React, Vite e Tailwind CSS. 
 Design moderno, responsive e animazioni fluide con Framer Motion.
 
+## 🛠️ Tech Stack
+
+### Frontend
+- **React 18.3.1** - UI Library
+- **Vite 5.4.11** - Build tool & dev server
+- **Tailwind CSS 3.4.17** - Utility-first CSS framework
+- **Framer Motion 11.15.0** - Animation library
+
+### Librerie UI/UX
+- **Lucide React** - Icon library
+- **React Icons** - Additional icons
+
+### Tools & DevOps
+- **ESLint** - Code linting
+- **PostCSS** - CSS processing
+- **Git** - Version control
+
+---
+
 ### 1️⃣ Features Principali
 
 - 🎨 **Design Moderno** - UI/UX curata con gradients e glassmorphism
@@ -46,28 +65,7 @@ Animazione di scroll personalizzata con easing cubic per una navigazione fluida:
 const easeInOutCubic = (t) => 
   t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 ```
-
-
-## 🛠️ Tech Stack
-
-### Frontend
-- **React 18.3.1** - UI Library
-- **Vite 5.4.11** - Build tool & dev server
-- **Tailwind CSS 3.4.17** - Utility-first CSS framework
-- **Framer Motion 11.15.0** - Animation library
-
-### Librerie UI/UX
-- **Lucide React** - Icon library
-- **React Icons** - Additional icons
-
-### Tools & DevOps
-- **ESLint** - Code linting
-- **PostCSS** - CSS processing
-- **Git** - Version control
-
----
-
-## 🚀 Quick Start
+## 3️⃣ Quick Start
 
 ### Prerequisiti
 
@@ -102,7 +100,7 @@ npm run preview
 
 ---
 
-## 📂 Struttura Progetto
+## 4️⃣ Struttura Progetto
 ```
 portfolio/
 ├── public/
@@ -127,13 +125,13 @@ portfolio/
 ├── tailwind.config.js
 └── README.md
 ```
-### 3️⃣ Performance Optimization
+### Performance Optimization
 - **Lazy Loading** - Componenti caricati on-demand
 - **Code Splitting** - Bundle ottimizzati
 - **Memoization** - React.memo su componenti pesanti
 - **Image Optimization** - Width/height espliciti, loading strategy
 
-### 4️⃣ Accessibility
+### Accessibility
 - ✅ Keyboard navigation completa
 - ✅ Focus management ottimale
 - ✅ ARIA labels e roles
