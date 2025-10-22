@@ -209,16 +209,3 @@ Questo progetto è proprietà privata. Tutti i diritti riservati © 2025 Yanik D
 ⭐ Se ti piace il progetto, lascia una stella!
 
 </div>
-```
-
----
-
-## 🎯 **FASE 3: CARICA ALTRI PROGETTI**
-
-Per ogni progetto (es. Gestione Ristorante, AI Chicago):
-
-### **Step 1: Crea nuovo repository**
-```
-Nome: kilo-ristorante
-Descrizione: Sistema gestione ristorante con prenotazioni e analytics
-Public
