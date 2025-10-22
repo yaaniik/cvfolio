@@ -60,13 +60,8 @@ Scroll-based animation che evidenzia le card al centro viewport con border color
 - 🟣 **Viola** per Projects  
 - 🟠 **Arancione** per Skills
 - 🎨 **Multi-color** per Education
+- Animazione di scroll personalizzata con easing cubic per una navigazione fluida.
 
-### Custom Smooth Scroll
-Animazione di scroll personalizzata con easing cubic per una navigazione fluida:
-```javascript
-const easeInOutCubic = (t) => 
-  t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-```
 ## 2️⃣ Quick Start
 
 ### Prerequisiti
@@ -77,10 +72,10 @@ const easeInOutCubic = (t) =>
 ### Installazione
 ```bash
 # Clone repository
-git clone https://github.com/TUO-USERNAME/portfolio.git
+git clone https://github.com/TUO-USERNAME/cvfolio.git
 
 # Entra nella cartella
-cd portfolio
+cd cvfolio
 
 # Installa dipendenze
 npm install
