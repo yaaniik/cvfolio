@@ -7,7 +7,7 @@
 ![Vite](https://img.shields.io/badge/Vite-5.4.11-646CFF?logo=vite)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4.17-38B2AC?logo=tailwind-css)
 
-**[🌐 Live Demo](https://yanikdimitrov.vercel.app/)** • **[📧 Contattami](mailto:yanik.dimitrov@outlook.com)** • **[💼 LinkedIn](https://linkedin.com/in/yanik-dimitrov/)**
+**[🌐 Visualizza Sito Live](https://yanikdimitrov.vercel.app/)** • **[📧 Contattami](mailto:yanik.dimitrov@outlook.com)** • **[💼 LinkedIn](https://linkedin.com/in/yanik-dimitrov/)**
 
 </div>
 
