@@ -59,13 +59,13 @@ Scroll-based animation che evidenzia le card al centro viewport con border color
 - 🟠 **Arancione** per Skills
 - 🎨 **Multi-color** per Education
 
-### 2️⃣ Custom Smooth Scroll
+### Custom Smooth Scroll
 Animazione di scroll personalizzata con easing cubic per una navigazione fluida:
 ```javascript
 const easeInOutCubic = (t) => 
   t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 ```
-## 3️⃣ Quick Start
+## 2️⃣ Quick Start
 
 ### Prerequisiti
 
@@ -100,7 +100,7 @@ npm run preview
 
 ---
 
-## 4️⃣ Struttura Progetto
+## 3️⃣ Struttura Progetto
 ```
 portfolio/
 ├── public/
@@ -125,7 +125,9 @@ portfolio/
 ├── tailwind.config.js
 └── README.md
 ```
-### Performance Optimization
+## 4️⃣ Performance
+
+### Optimization
 - **Lazy Loading** - Componenti caricati on-demand
 - **Code Splitting** - Bundle ottimizzati
 - **Memoization** - React.memo su componenti pesanti
@@ -141,7 +143,7 @@ portfolio/
 
 ---
 
-## 📱 Responsive Breakpoints
+### Responsive Breakpoints
 ```css
 - Mobile: < 640px
 - Tablet: 640px - 1024px
