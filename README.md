@@ -60,7 +60,7 @@ Scroll-based animation che evidenzia le card al centro viewport con border color
 - 🟣 **Viola** per Projects  
 - 🟠 **Arancione** per Skills
 - 🎨 **Multi-color** per Education
-- Animazione di scroll personalizzata con easing cubic per una navigazione fluida.
+- 🔥 Animazione di scroll personalizzata con easing cubic per una navigazione fluida
 
 ## 2️⃣ Quick Start
 
